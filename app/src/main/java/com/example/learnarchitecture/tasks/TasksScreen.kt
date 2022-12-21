@@ -23,6 +23,7 @@ fun TasksScreen(
     viewModel: TasksViewModel = hiltViewModel(),
     scaffoldState: ScaffoldState = rememberScaffoldState()
 ) {
+    Text(text = "hehe")
     Scaffold(scaffoldState = scaffoldState, topBar = {
 //        TasksTopAppBar(
 //            openDrawer = openDrawer,

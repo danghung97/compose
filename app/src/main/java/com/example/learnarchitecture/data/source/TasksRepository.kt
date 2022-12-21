@@ -1,5 +1,6 @@
 package com.example.learnarchitecture.data.source
 
+import com.example.learnarchitecture.data.Result
 import com.example.learnarchitecture.data.Task
 import kotlinx.coroutines.flow.Flow
 
@@ -9,6 +10,8 @@ interface TasksRepository {
     suspend fun getTasks(forceUpdate: Boolean = false): Result<List<Task>>
 
     suspend fun refreshTasks()
+
+    fun getTaskStream(taskId: String): Flow<Result<Task>>
 
     suspend fun getTask(taskId: String, forceUpdate: Boolean = false): Result<Task>
 
@@ -28,4 +31,5 @@ interface TasksRepository {
 
     suspend fun deleteAllTasks()
 
-    suspend fun deleteTask(taskId: String)}
+    suspend fun deleteTask(taskId: String)
+}

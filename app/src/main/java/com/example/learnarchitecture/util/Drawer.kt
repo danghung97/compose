@@ -45,13 +45,13 @@ private fun AppDrawer(
         DrawerButton(
             action = { navigateToTasks(); closeDrawer() },
             label = "List tasks",
-            isSelected = currentRoute == Destinations.TASK_ROUTE
+            isSelected = currentRoute == Destinations.TASKS_ROUTE
         )
         Spacer(modifier = Modifier.height(10.dp))
         DrawerButton(
             action = { navigateToStatistics(); closeDrawer() },
             label = "List tasks",
-            isSelected = currentRoute == Destinations.TASK_ROUTE
+            isSelected = currentRoute == Destinations.TASKS_ROUTE
         )
     }
 }

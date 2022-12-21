@@ -2,6 +2,7 @@ package com.example.learnarchitecture.data.source
 
 import com.example.learnarchitecture.data.Task
 import kotlinx.coroutines.flow.Flow
+import com.example.learnarchitecture.data.Result
 
 interface TasksDataSource {
 

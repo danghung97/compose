@@ -9,6 +9,7 @@ import com.example.learnarchitecture.data.Task
 import com.example.learnarchitecture.data.source.TasksRepository
 import com.example.learnarchitecture.tasks.TasksFilterType.*
 import com.example.learnarchitecture.util.Async
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.map
@@ -31,6 +32,7 @@ data class FilteringUiInfo(
 // Used to save the current filtering in SavedStateHandle.
 const val TASKS_FILTER_SAVED_STATE_KEY = "TASKS_FILTER_SAVED_STATE_KEY"
 
+@HiltViewModel
 class TasksViewModel @Inject constructor(
     private val taskRespository: TasksRepository,
     private val savedStateHandle: SavedStateHandle
